@@ -40,7 +40,7 @@ public class ApiCall {
 		return new ResponseEntity<List<Products>>(list, HttpStatus.OK);
 	}
 
-	@GetMapping(value = "")
+	@GetMapping(value = "findByPid")
 	public ResponseEntity<?> getDetailsByPid(@RequestParam("pid") String pid) {
 
 		List<Products> listOfProducts = productRepo.findByPid(pid);
