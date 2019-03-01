@@ -36,6 +36,7 @@ public class ApiCall {
 	public ResponseEntity<?>getAllProducts(){
 	
 		List<Products>list=(List<Products>) productRepo.findAll();
+		System.out.println(list);
 		return new ResponseEntity<List<Products>>(list,HttpStatus.OK);
 	}
 }
